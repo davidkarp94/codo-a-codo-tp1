@@ -5,6 +5,7 @@
 
     /* Colores */
     --grisOscuro: #353a40;
+    --azulOscuro: #113245;
     --azul: #1e5371;
     --verdeClaro: #96c93e;
     --verde: #29a744;
@@ -490,5 +491,47 @@ p {
 
     .nombre {
         margin-bottom: 1.5rem;
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-image: linear-gradient(to right, var(--azulOscuro), var(--azul));
+    padding: 2rem;
+}
+
+.enlaces-footer {
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlaces-footer a {
+    color: var(--blanco);
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .enlaces-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10rem;
+    }
+
+    .footer .contenedor {
+        max-width: 90%;
+    }
+
+    .enlaces-footer a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .enlaces-footer {
+        gap: 4rem;
     }
 }
