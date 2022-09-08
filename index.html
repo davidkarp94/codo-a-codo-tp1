@@ -115,7 +115,6 @@
 
     <section class="seccion-bsas">
         <div class="borde-gris imagen-seccion-bs">
-            <img src="img/honolulu.jpg" alt="imagen buenos aires">
         </div>
 
         <div class="texto-seccion-bs borde-gris">
@@ -126,12 +125,26 @@
 
     </section>
 
-    <section class="formulario mw-50">
+    <section class="contenedor-formulario">
         <div class="texto-formulario">
             <h5>Conviértete en un</h5>
             <h2>Orador</h2>
             <p>Anótate como orador para dar una <span class="delineado">charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
         </div>
+
+        <form action="" class="formulario">
+            <div class="nombre-y-apellido">
+                <input type="text" placeholder="Nombre" class="nombre">
+                <input type="text" placeholder="Apellido">
+            </div>
+
+            <textarea class="mensaje" placeholder="Sobre qué quieres hablar?"></textarea>
+
+            <p>Recuerda incluir un título para tu charla</p>
+
+            <input type="submit" value="Enviar"
+            class="boton-enviar">
+        </form>
     </section>
 </body>
 </html>

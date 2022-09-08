@@ -373,7 +373,11 @@ p {
 }
 
 .imagen-seccion-bs {
+    background-image: url(../img/honolulu.jpg);
     border-left: none;
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .texto-seccion-bs {
@@ -397,6 +401,10 @@ p {
         display: block;
     }
 
+    .imagen-seccion-bs {
+        height: 40rem;
+    }
+
     .imagen-seccion-bs,
     .texto-seccion-bs {
         border: none;
@@ -405,15 +413,82 @@ p {
 
 /* Formulario */
 
-.formulario {
+.contenedor-formulario {
+    max-width: 50%;
+    margin: 0 auto;
     text-align: center;
 }
 
 .texto-formulario {
     margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .delineado {
     text-decoration: underline dotted;
+}
+
+.nombre-y-apellido {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.nombre-y-apellido input {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1.3rem;
+}
+
+.mensaje {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+
+.formulario input,
+.formulario textarea {
+    border: 1px solid var(--grisClaro);
+    border-radius: 0.5rem;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    font-family: var(--principal);
+}
+
+.formulario p {
+    text-align: left;
+    font-size: 1.2rem !important;
+    color: var(--gris);
+}
+
+.boton-enviar {
+    background-color: var(--verdeClaro);
+    color: var(--blanco);
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contenedor-formulario {
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-formulario {
+        max-width: 90%;
+    }
+
+    .nombre-y-apellido {
+        display: block;
+    }
+
+    .nombre {
+        margin-bottom: 1.5rem;
+    }
 }
