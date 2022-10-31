@@ -29,6 +29,7 @@ var categoria = document.getElementById('categoria');
 const borrar = document.getElementById('borrar');
 const resumen = document.getElementById('resumen');
 const mostrarPago = document.getElementById('a-pagar');
+const mostrarCant = document.getElementById('cant-tickets');
 
 estudiante.addEventListener('click', function() {
     categoria.value = 'estudiante';
@@ -48,16 +49,20 @@ resumen.addEventListener('click', function(e) {
     if (categoria.value == 'estudiante') {
         cuenta = 200 * 0.2 * cantidad.value;
         mostrarPago.innerHTML = `$${cuenta}`;
+        mostrarCant.innerHTML = `(${cantidad.value} ticket/s categoría ${categoria.value}: $${200*0.2} c/u)`;
     } else if (categoria.value == 'trainee') {
         cuenta = 200 * 0.5 * cantidad.value;
         mostrarPago.innerHTML = `$${cuenta}`;
+        mostrarCant.innerHTML = `(${cantidad.value} ticket/s categoría ${categoria.value}: $${200*0.5} c/u)`;
     } else if (categoria.value == 'junior') {
         cuenta = 200 * 0.85 * cantidad.value;
         mostrarPago.innerHTML = `$${cuenta}`;
+        mostrarCant.innerHTML = `(${cantidad.value} ticket/s categoría ${categoria.value}: $${200*0.85} c/u)`;
     }
 })
 
 borrar.addEventListener('click', function(e) {
     e.preventDefault();
     mostrarPago.innerHTML = '';
+    mostrarCant.innerHTML = '';
 })
